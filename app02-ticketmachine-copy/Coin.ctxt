@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=Coin
-comment0.text=\r\n\ Enumeration\ used\ for\ class\ coin\r\n\r\n\ @author\ Abbas\ Raziq\r\n\ @version\ 2/11/2020\r\n
-comment1.params=value
-comment1.target=Coin(int)
-comment2.params=
-comment2.target=int\ getValue()
-numComments=3
