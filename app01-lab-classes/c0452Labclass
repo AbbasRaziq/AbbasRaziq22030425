@@ -1,0 +1,14 @@
+LabClass c0452Lab = new LabClass(3);
+Student student1 = new Student("Tom", "6364");
+Student student2 = new Student("Bill", "6266");
+Student student3 = new Student("John", "6345");
+c0452Lab.setTime("Tuesday 29th September 2020");
+c0452Lab.setRoom("G100");
+c0452Lab.setInstructor("Nicholas Day");
+c0452Lab.enrollStudent(student1);
+c0452Lab.enrollStudent(student2);
+c0452Lab.enrollStudent(student3);
+student1.addCredits(20);
+student2.addCredits(20);
+student3.addCredits(20);
+student1.changeName("Dom");
