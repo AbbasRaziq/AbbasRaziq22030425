@@ -1,0 +1,9 @@
+Course course1 = new Course("G400", "Computing");
+Student student1 = new Student("Paul", "676");
+Student student2 = new Student("Tom", "623");
+Student student3 = new Student("Jill", "784");
+student1.addCourse(course1);
+student2.addCourse(course1);
+student3.addCourse(course1);
+course1.print();
+CodeNumber: G400 Title: Computing
