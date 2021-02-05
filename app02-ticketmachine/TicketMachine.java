@@ -1,45 +1,100 @@
+import java.text.SimpleDateFormat;
+
 /**
- * TicketMachine models a ticket machine that issues
- * flat-fare tickets.
- * The price of a ticket is specified via the constructor.
- * Instances will check to ensure that a user only enters
- * sensible amounts of money, and will only print a ticket
- * if enough money has been input.
+ * The ticket machine is where the users select tickets and where the tickets
+ * are printed and money stored.
+ * Prices of the tickets are shown by the constructor.
+ * The amount of money inserted by the user will be checked by instances and to
+ * see if the right amount of money to purchase a ticket has been input.
  * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
- * 
- * Modified by Student Name
+ * @author Abbas Raziq
+ * @version 27/11/2020
  */
 public class TicketMachine
 {
-    public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);
-    public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
-    public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycombe", 300);
+    public static final Ticket Aylesbury_TICKET = new Ticket("Aylesbury", 200);
+    public static final Ticket Amersham_TICKET = new Ticket("Amersham", 300);
+    public static final Ticket HighWycombe_TICKET  = new Ticket("High Wycombe", 330);
     
+    // This selects the ticket you want and puts it in curret ticket.
     private Ticket currentTicket;
-    // The amount of money entered by a customer so far.
-    private int balance;
-    // The total amount of money collected by this machine.
-    private int total;
-
-    private int price;
     
+    // Money that is inputted by the user and is stored in the balance.
+    private int balance;
+    
+    // The total of money collected by this machine in pence input by the user.
+    private int total;
+    
+    private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
+
     /**
-     * Create a machine that issues tickets of the given price.
+     * A machine that sets that the balance as 0 and that there is no ticket
+     * selected.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
         balance = 0;
         total = 0;
-        
+
         currentTicket = null;
     }
 
 
+    public void PrintDestinations()
+    {
+        System.out.println("Available Tickets: ");
+
+        System.out.print(" Tickets to " + Aylesbury_TICKET.getDestination());
+        System.out.println(" cost " + Aylesbury_TICKET.getPrice());
+        
+        System.out.print(" Tickets to " + Amersham_TICKET.getDestination());
+        System.out.println(" cost " + Amersham_TICKET.getPrice());  
+        
+        System.out.print(" Tickets to " + HighWycombe_TICKET.getDestination());
+        System.out.println(" cost " + HighWycombe_TICKET.getPrice());        
+    }
+    
+    public void selectAylesburyTicket()
+    {
+       currentTicket = Aylesbury_TICKET; 
+    }
+    
+    public void selectAmershamTicket()
+    {
+       currentTicket = Amersham_TICKET; 
+    }
+    
+    public void selectWycombeTicket()
+    {
+       currentTicket = HighWycombe_TICKET; 
+    }
+    
     /**
-     * Return The amount of money already inserted for the
-     * next ticket.
+     * Uses the current ticket to get price for the ticket.
+     */
+    public int getPrice()
+    {
+        if(currentTicket != null)
+        {
+            return currentTicket.getPrice();
+        }
+        else
+        {
+            System.out.println("You have not chosen a destination!");
+            return 0;
+        }
+    }
+
+    /**
+     * The enumaration only allows the chosen coins.
+     */
+    public void insertCoin(Coin coin)
+    {
+        updateBalance(coin.getValue());
+    }
+    
+    /**
+     * Return the amount of money the user has input.
      */
     public int getBalance()
     {
@@ -47,56 +102,71 @@ public class TicketMachine
     }
 
     /**
-     * Receive an amount of money from a customer.
-     * Check that the amount is sensible.
+     * This method allows a simple integer to only accept certain coins.
      */
-    public void insertMoney(int amount)
+    public void insertCoin(int value)
     {
-        if(amount > 0) 
+        switch(value)
         {
-            balance = balance + amount;
-        }
-        else 
-        {
-            System.out.println("Use a positive amount rather than: " +
-                               amount);
+            case 10:  case 20: case 100: case 200: 
+            
+                updateBalance(value);
+                break;
+
+            default: 
+                System.out.println();
+                System.out.println("This " + value + " is not an acceptable coin!");
         }
     }
     
+    private void updateBalance(int amount)
+    {
+        balance = balance + amount;
+        
+        System.out.println();
+        System.out.println("Received " + amount + " pence");
+        printBalance();
+    }
+
+    public void printBalance()
+    {
+        System.out.println("Balance " + balance + " pence");
+    }
+    
     /**
-     * Print a ticket if enough money has been inserted, and
-     * reduce the current balance by the ticket price. Print
-     * an error message if more money is required.
+     * This prints the ticket the user has chosen if the correct amount of money
+     * has been input and then prints the balance after the ticket has been bought.
      */
     public void printTicket()
     {
+        int price = currentTicket.getPrice();
+        
+        String date = formatter.format(currentTicket.getDate());
+        String destination = currentTicket.getDestination();
         
         if(balance >= price) 
         {
-            // Simulate the printing of a ticket.
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# Aylesbury");
-            System.out.println("# " + price + "p");
-            System.out.println("##################");
+            System.out.print("Train Ticket to ");
+            System.out.println(destination );
+            System.out.println("Date: " + date);
+            System.out.println("Price: " + price + " pence");
             System.out.println();
 
-            // Update the total collected with the price.
+            // Update the totalCollected collected with the price.
             total = total + price;
-            // Reduce the balance by the price.
+            // Reduce the balance by the prince.
             balance = balance - price;
         }
         else 
         {
-            System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
-                    
+            System.out.println("Please insert at least: " +
+                (price - balance) + " more pence.");
+
         }
     }
 
     /**
-     * Return the money in the balance.
-     * The balance is cleared.
+     * Money is returned to balance and the balance is then cleared.
      */
     public int refundBalance()
     {
