@@ -1,30 +1,32 @@
 import java.util.Date;
+
 /**
- * Write a description of class Ticket here.
- *
+ * This is where the ticket is created and stored with the date, price and destination.
+ * 
  * @author Abbas Raziq
- * @date 13/11/2020
+ * @version 27/11/2020
  */
 public class Ticket
 {
+    // Ticket price in pence
+    private int price;
+    // Time in hours
     private String destination;
     
-    //in pence
-    private int price;
+    private Date present = new Date();
     
-    private Date datePurchased;
     /**
-     * Constructor for objects of creating a price and destination.
+     * This constructor is for creating tickets and input the destination.
      */
-    public Ticket(String destination, int price)
+    public Ticket( String destination, int price)
     {
+        // Variables used to input info on tickets
         this.price = price;
         this.destination = destination;
-        datePurchased = new Date();
     }
-    
+
     /**
-     * This method allows us to get the ticket price.
+     * Price of tickets
      */
     public int getPrice()
     {
@@ -32,24 +34,16 @@ public class Ticket
     }
     
     /**
-     * This method allows us to get the ticket destination.
+     * Name of destination
      */
     public String getDestination()
     {
         return destination;
     }
     
-    /**
-     * This method allows us to get the date the ticket was purchased.
-     */
-    public Date getdatePurchased()
+    public Date getDate()
     {
-        return datePurchased;
+        return present;
     }
     
-    public void print()
-    {
-        System.out.print("Destination: " + destination);
-        System.out.println(" Price: "+ price + " pence");
-    }
 }
