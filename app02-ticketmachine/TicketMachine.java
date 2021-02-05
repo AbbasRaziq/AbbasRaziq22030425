@@ -25,7 +25,7 @@ public class TicketMachine
     // The total of money collected by this machine in pence input by the user.
     private int total;
     
-    private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
+    private SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
     /**
      * A machine that sets that the balance as 0 and that there is no ticket
