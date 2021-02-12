@@ -13,7 +13,7 @@ public class Ticket
     // Time in hours
     private String destination;
     
-    private Date purchased = new Date();
+    private Date present = new Date();
     
     /**
      * This constructor is for creating tickets and input the destination.
@@ -43,7 +43,7 @@ public class Ticket
     
     public Date getDate()
     {
-        return purchased;
+        return present;
     }
     
 }
