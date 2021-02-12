@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
  */
 public class TicketMachine
 {
-    public static final Ticket Aylesbury_TICKET = new Ticket("Aylesbury", 200);
+    public static final Ticket Aylesbury_TICKET = new Ticket("Aylesbury", 220);
     public static final Ticket Amersham_TICKET = new Ticket("Amersham", 300);
     public static final Ticket HighWycombe_TICKET  = new Ticket("High Wycombe", 330);
     
@@ -25,7 +25,7 @@ public class TicketMachine
     // The total of money collected by this machine in pence input by the user.
     private int total;
     
-    private SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+    private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
 
     /**
      * A machine that sets that the balance as 0 and that there is no ticket
@@ -122,7 +122,6 @@ public class TicketMachine
     private void updateBalance(int amount)
     {
         balance = balance + amount;
-        
         System.out.println();
         System.out.println("Received " + amount + " pence");
         printBalance();
