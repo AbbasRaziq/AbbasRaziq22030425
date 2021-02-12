@@ -1,0 +1,67 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.PrintDestinations();
+Available Tickets: 
+ Tickets to Aylesbury cost 220
+ Tickets to Amersham cost 300
+ Tickets to High Wycombe cost 330
+ticketMa1.selectAylesburyTicket();
+ticketMa1.insertCoin(200);
+
+Received 200 pence
+Balance 200 pence
+ticketMa1.printTicket();
+Please insert at least: 20 more pence.
+ticketMa1.insertCoin(300);
+
+This 300 is not an acceptable coin!
+ticketMa1.insertCoin(200);
+
+Received 200 pence
+Balance 400 pence
+ticketMa1.printTicket();
+Train Ticket to Aylesbury
+Date: 12/Feb/2021
+Price: 220 pence
+
+ticketMa1.selectAmershamTicket();
+ticketMa1.printBalance();
+Balance 180 pence
+ticketMa1.insertCoin(200);
+
+Received 200 pence
+Balance 380 pence
+ticketMa1.insertCoin(200);
+
+Received 200 pence
+Balance 580 pence
+ticketMa1.printTicket();
+Train Ticket to Amersham
+Date: 12/Feb/2021
+Price: 300 pence
+
+ticketMa1.selectWycombeTicket();
+ticketMa1.printTicket();
+Please insert at least: 50 more pence.
+ticketMa1.insertCoin(50);
+
+This 50 is not an acceptable coin!
+ticketMa1.insertCoin(100);
+
+Received 100 pence
+Balance 380 pence
+ticketMa1.printTicket();
+Train Ticket to High Wycombe
+Date: 12/Feb/2021
+Price: 330 pence
+
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.printBalance();
+Balance 0 pence
+ticketMa1.insertCoin(100);
+
+Received 100 pence
+Balance 100 pence
+ticketMa1.refundBalance()
+    returned int 100
+ticketMa1.printBalance();
+Balance 0 pence
