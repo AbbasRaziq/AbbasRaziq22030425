@@ -1,13 +1,15 @@
 import java.util.*;
 
 /**
- * The LabClass class represents an enrolment list for one lab class. It stores
- * the time, room and participants of the lab, as well as the instructor's name.
+ * The LabClass is where students will be enrolled on certain course. This is
+ * also where the students, the room and time where they will be and will show
+ * the instructors name.
+ * The students will be enrolled on here.
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
  * modified by Abbas Raziq
- * dated 02/02/2021
+ * dated 12/02/2021
  */
 public class LabClass
 {
@@ -19,8 +21,7 @@ public class LabClass
     private int capacity;
     
     /**
-     * Create a LabClass with a maximum number of enrolments. All other details
-     * are set to default values.
+     * The max number of students in the course.
      */
     public LabClass(int maxNumberOfStudents)
     {
@@ -33,7 +34,7 @@ public class LabClass
     }
 
     /**
-     * Add a student to this LabClass.
+     * Enrolling new students on to course.
      */
     public void enrollStudent(Student newStudent)
     {
@@ -73,7 +74,7 @@ public class LabClass
     }
     
     /**
-     * Set the name of the instructor for this LabClass.
+     * Where the instructor will be set.
      */
     public void setInstructor(String instructorName)
     {
@@ -81,8 +82,7 @@ public class LabClass
     }
     
     /**
-     * Print out a class list with other LabClass details to the standard
-     * terminal.
+     * This is where it would print all the information.
      */
     public void printList()
     {
