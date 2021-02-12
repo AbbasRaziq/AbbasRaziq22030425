@@ -3,7 +3,7 @@
  * Write a description of class Course here.
  *
  * @author (your name)
- * @version (a version number or a date)
+ * @version 12/02/21
  */
 public class Course
 {
@@ -11,7 +11,8 @@ public class Course
     private String title;
 
     /**
-     * Constructor for objects of class Course
+     * This constructor will be used for creating a course and define it by the
+     * code number and title.
      */
     public Course(String codeNumber, String title)
     {
@@ -19,6 +20,10 @@ public class Course
         this.title=title;
     }
 
+    /**
+     * This will print the code number and title of the module.
+     */
+    
     public void print()
     {
         System.out.println("CodeNumber: "+codeNumber+" Title: "+title);
