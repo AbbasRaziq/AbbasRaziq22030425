@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Student
-comment0.text=\r\n\ The\ Student\ class\ represents\ a\ student\ in\ a\ student\ administration\ system.\r\n\ It\ holds\ the\ student\ details\ such\ as\ name,\ id\ and\ credits\r\n\ \r\n\ @author\ Michael\ K\u00F6lling\ and\ David\ Barnes\r\n\ @version\ 2016.02.29\r\n\ \r\n\ Modified\ by\ Derek\r\n
+comment0.text=\r\n\ The\ Student\ class\ represents\ a\ student\ in\ a\ student\ administration\ system.\r\n\ It\ holds\ the\ student\ details\ such\ as\ name,\ id\ and\ credits\r\n\ \r\n\ @author\ Abbas\ Raziq\r\n\ @version\ 12/02/2021\r\n
 comment1.params=fullName\ studentID
 comment1.target=Student(java.lang.String,\ java.lang.String)
 comment1.text=\r\n\ Create\ a\ new\ student\ with\ a\ given\ name\ and\ ID\ number.\r\n
