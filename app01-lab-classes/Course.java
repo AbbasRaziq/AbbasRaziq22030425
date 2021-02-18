@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Course here.
+ * This is where the code number and title of the course name will be created.
  *
  * @author (your name)
  * @version 12/02/21
