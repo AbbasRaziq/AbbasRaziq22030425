@@ -1,0 +1,33 @@
+Student student1 = new Student("Abbas Raziq", "22030425");
+Course course1 = new Course("BT1CTG1", "Computing");
+student1.enrolOnCourse(course1);
+Module module1 = new Module("CO450", "Computer Architectures");
+Module module2 = new Module("CO452", "Programming Concepts");
+Module module3 = new Module("CO454", "Digital Technologies & Professional Practice");
+Module module4 = new Module("CO456", "Web Development");
+module1.print();
+	Module CO450 Computer Architectures is not completed yet!
+course1.print();
+CodeNumber: BT1CTG1 Title: Computing
+
+course1.addModule(1, module1);
+course1.addModule(2, module2);
+course1.addModule(3, module3);
+course1.addModule(4, module4);
+course1.print();
+CodeNumber: BT1CTG1 Title: Computing
+
+	Module CO450 Computer Architectures is not completed yet!
+	Module CO452 Programming Concepts is not completed yet!
+	Module CO454 Digital Technologies & Professional Practice is not completed yet!
+	Module CO456 Web Development is not completed yet!
+course1.printGrade();
+You have not completed the course yet!
+student1.print();
+Abbas Raziq, student ID: 22030425, credits: 0
+CodeNumber: BT1CTG1 Title: Computing
+
+	Module CO450 Computer Architectures is not completed yet!
+	Module CO452 Programming Concepts is not completed yet!
+	Module CO454 Digital Technologies & Professional Practice is not completed yet!
+	Module CO456 Web Development is not completed yet!
