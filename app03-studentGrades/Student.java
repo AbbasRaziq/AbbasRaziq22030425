@@ -1,11 +1,11 @@
 import java.util.*;
 
 /**
- * The Student class represents a student in a student administration system.
- * It holds the student details relevant in our context.
+ * This class is representing a student in a administration system.
+ * It contains the student name, id, credits and course.
  * 
- * @author Michael Kölling and David Barnes
- * @version 2016.02.29
+ * @author Abbas Raziq
+ * @version 18/02/2021
  */
 public class Student
 {
@@ -15,9 +15,11 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
-    
+    //This links the student class to the course class.
+    private Course course;
+
     /**
-     * Create a new student with a given name and ID number.
+     * This is where the students name, id and credits are created.
      */
     public Student(String fullName, String studentID)
     {
@@ -27,7 +29,7 @@ public class Student
     }
 
     /**
-     * Return the full name of this student.
+     * This will get the full name of the student.
      */
     public String getName()
     {
@@ -35,7 +37,7 @@ public class Student
     }
 
     /**
-     * Set a new name for this student.
+     * This will change the students name.
      */
     public void changeName(String replacementName)
     {
@@ -43,7 +45,7 @@ public class Student
     }
 
     /**
-     * Return the student ID of this student.
+     * This will return the student id
      */
     public String getStudentID()
     {
@@ -58,7 +60,14 @@ public class Student
         credits += additionalPoints;
     }
 
-    
+    /**
+     * Enrol the student on a course.
+     */
+    public void enrolOnCourse(Course course)
+    {
+        this.course = course;
+    }
+
     /**
      * Return the number of credit points this student has accumulated.
      */
@@ -76,12 +85,23 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
-    
+
     /**
      * Print the student's name and ID number to the output terminal.
      */
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        course.print();
     }
+
+    /**
+     * This will print the grade achieved.
+     */
+    public void printCourse()
+    {
+        course.print();
+        course.printGrade();
+    }
+
 }
