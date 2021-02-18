@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Course
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Course\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ 12/02/21\r\n
+comment0.text=\r\n\ This\ is\ where\ the\ code\ number\ and\ title\ of\ the\ course\ name\ will\ be\ created.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ 12/02/21\r\n
 comment1.params=codeNumber\ title
 comment1.target=Course(java.lang.String,\ java.lang.String)
 comment1.text=\r\n\ This\ constructor\ will\ be\ used\ for\ creating\ a\ course\ and\ define\ it\ by\ the\r\n\ code\ number\ and\ title.\r\n
