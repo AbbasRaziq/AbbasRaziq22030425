@@ -6,10 +6,8 @@ import java.util.*;
  * the instructors name.
  * The students will be enrolled on here.
  * 
- * @author Michael Kölling and David Barnes
- * @version 2016.02.29
- * modified by Abbas Raziq
- * dated 12/02/2021
+ * @author Abbas Raziq
+ * @version 12/02/2021
  */
 public class LabClass
 {
