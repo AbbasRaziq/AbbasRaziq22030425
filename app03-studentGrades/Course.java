@@ -98,7 +98,8 @@ public class Course
             }
             else
             {
-                System.out.println("You have not completed the course yet!");
+                System.out.println("Your final grade is" + calculateGrade());
+                System.out.println("Please complete the module.");
             }
         }
     }
