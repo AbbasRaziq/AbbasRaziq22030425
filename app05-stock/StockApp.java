@@ -9,30 +9,22 @@
  */
 public class StockApp
 {
-    // Use to get user input
-    private InputReader input;
+
+    private InputReader reader;
     
     /**
      * Constructor for objects of class StockApp
      */
     public StockApp()
     {
-        input = new InputReader();
+        reader = new InputReader();
     }
 
     /**
-     * 
+     *  Display a list of menu choices and get the user's
+     *  choice.
      */
     public void run()
-    {
-        printHeading();
-        getMenuChoice();
-    }
-    
-    /**
-     * 
-     */
-    public void getMenuChoice()
     {
         boolean finished = false;
         
@@ -41,7 +33,7 @@ public class StockApp
             printHeading();
             printMenuChoices();
            
-            String choice = input.getInput();
+            String choice = reader.getString("Please enter your choice > ");
             finished = true;
         }
     }
