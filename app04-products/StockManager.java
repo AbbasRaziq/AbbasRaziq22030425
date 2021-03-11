@@ -35,19 +35,33 @@ public class StockManager
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
-    public void delivery(int id, int amount)
+    public void deliverProduct(int id, int amount)
     {
     }
     
     /**
-     * Try to find a product in the stock with the given id.
-     * @return The identified product, or null if there is none
-     *         with a matching ID.
+     * 
      */
     public Product findProduct(int id)
     {
         return null;
     }
+    
+    /**
+     * Sell one of the given item.
+     * Show the before and after status of the product.
+     * @param id The ID of the product being sold.
+     */
+    public void sellProduct(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            product.sellOne();
+        }
+    }    
+
     
     /**
      * Locate a product with the given ID, and return how
@@ -62,9 +76,41 @@ public class StockManager
     }
 
     /**
-     * Print details of all the products.
+     * Print details of the given product. If found,
+     * its name and stock quantity will be shown.
+     * @param id The ID of the product to look for.
      */
-    public void printProductDetails()
+    public void printProduct(int id)
     {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            System.out.println(product.toString());
+        }
+    }
+    
+    /**
+     * Print out each product in the stock
+     * in the order they are in the stock list
+     */
+    public void printAllProducts()
+    {
+        printHeading();
+        
+        for(Product product : stock)
+        {
+            System.out.println(product);
+        }
+
+        System.out.println();
+    }
+    
+    public void printHeading()
+    {
+        System.out.println();
+        System.out.println("Peacock's Stock List");
+        System.out.println("====================");
+        System.out.println();
     }
 }
