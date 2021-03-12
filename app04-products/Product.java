@@ -1,8 +1,8 @@
 /**
  * Model some details of a product sold by a company.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Abbas Raziq
+ * @version 11/03/2021
  */
 public class Product
 {
@@ -43,6 +43,14 @@ public class Product
     }
 
     /**
+     * This will set the name and allow for the products to be renamed
+     */
+    public void setName(String newName)
+    {
+        name = newName;
+    }
+
+    /**
      * @return The quantity in stock.
      */
     public int getQuantity()
@@ -73,7 +81,7 @@ public class Product
         else 
         {
             System.out.println("Attempt to restock " + name +
-                               " with a non-positive amount: " + amount);
+                " with a non-positive amount: " + amount);
         }
     }
 
@@ -81,11 +89,11 @@ public class Product
      * Sell one of these products.
      * An error is reported if there appears to be no stock.
      */
-    public void sellOne()
+    public void sellQuantity(int amount)
     {
         if(quantity > 0) 
         {
-            quantity--;
+            quantity -= amount;
         }
         else 
         {
