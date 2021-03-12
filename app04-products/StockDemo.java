@@ -1,4 +1,3 @@
-
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -34,6 +33,9 @@ public class StockDemo
         manager.addProduct(new Product(108, "Sony Xperia 1 II"));
         manager.addProduct(new Product(109, "Samsung Galaxy Note 20 Ultra"));
         manager.addProduct(new Product(110, "iPhone 11"));
+        manager.addProduct(new Product(111, "iPad Pro 4th Gen"));
+        manager.addProduct(new Product(112, "Xbox Series X"));
+        manager.addProduct(new Product(113, "Playstation 5"));
     }
 
     /**
@@ -73,6 +75,9 @@ public class StockDemo
         manager.deliverProduct(108, 100);
         manager.deliverProduct(109, 100);
         manager.deliverProduct(110, 100);
+        manager.deliverProduct(111, 100);
+        manager.deliverProduct(112, 100);
+        manager.deliverProduct(113, 100);
     }
 
     /**
@@ -92,5 +97,8 @@ public class StockDemo
         manager.sellProduct(108, 10);
         manager.sellProduct(109, 10);
         manager.sellProduct(110, 10);
+        manager.sellProduct(111, 10);
+        manager.sellProduct(112, 10);
+        manager.sellProduct(113, 10);
     }
 }
