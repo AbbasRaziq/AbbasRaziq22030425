@@ -1,0 +1,88 @@
+StockManager AbbasStockManager = new StockManager();
+StockDemo AbbasStockDemo = new StockDemo(AbbasStockManager);
+Attempt to add products with 0 quantity
+AbbasStockDemo.runDemo();
+
+Abbas's Stock List
+====================
+
+101: Samsung Galaxy S21 Ultra stock level: 0
+102: OnePlus 8 Pro stock level: 0
+103: Google Pixel 4A stock level: 0
+104: iPhone 12 Pro Max stock level: 0
+105: Oppo Find X2 Pro stock level: 0
+106: Motorola Edge Plus stock level: 0
+107: Xiaomi Mi Note 10 stock level: 0
+108: Sony Xperia 1 II stock level: 0
+109: Samsung Galaxy Note 20 Ultra stock level: 0
+110: iPhone 11 stock level: 0
+111: iPad Pro 4th Gen stock level: 0
+112: Xbox Series X stock level: 0
+113: Playstation 5 stock level: 0
+
+Attempt to deliver products
+
+Abbas's Stock List
+====================
+
+101: Samsung Galaxy S21 Ultra stock level: 100
+102: OnePlus 8 Pro stock level: 100
+103: Google Pixel 4A stock level: 100
+104: iPhone 12 Pro Max stock level: 100
+105: Oppo Find X2 Pro stock level: 100
+106: Motorola Edge Plus stock level: 100
+107: Xiaomi Mi Note 10 stock level: 100
+108: Sony Xperia 1 II stock level: 100
+109: Samsung Galaxy Note 20 Ultra stock level: 100
+110: iPhone 11 stock level: 100
+111: iPad Pro 4th Gen stock level: 100
+112: Xbox Series X stock level: 100
+113: Playstation 5 stock level: 100
+
+Attempt to sell products
+
+Abbas's Stock List
+====================
+
+101: Samsung Galaxy S21 Ultra stock level: 90
+102: OnePlus 8 Pro stock level: 90
+103: Google Pixel 4A stock level: 90
+104: iPhone 12 Pro Max stock level: 90
+105: Oppo Find X2 Pro stock level: 90
+106: Motorola Edge Plus stock level: 90
+107: Xiaomi Mi Note 10 stock level: 90
+108: Sony Xperia 1 II stock level: 90
+109: Samsung Galaxy Note 20 Ultra stock level: 90
+110: iPhone 11 stock level: 90
+111: iPad Pro 4th Gen stock level: 90
+112: Xbox Series X stock level: 90
+113: Playstation 5 stock level: 90
+
+AbbasStockManager.deliverProduct(101, 20);
+AbbasStockManager.renameProduct(105, "Airpods");
+105: Oppo Find X2 Pro stock level: 90
+==Product Renamed==
+105: Airpods stock level: 90
+AbbasStockManager.removeProduct(108);
+Product id 108 removed
+AbbasStockManager.printAllProducts();
+
+Abbas's Stock List
+====================
+
+101: Samsung Galaxy S21 Ultra stock level: 110
+102: OnePlus 8 Pro stock level: 90
+103: Google Pixel 4A stock level: 90
+104: iPhone 12 Pro Max stock level: 90
+105: Airpods stock level: 90
+106: Motorola Edge Plus stock level: 90
+107: Xiaomi Mi Note 10 stock level: 90
+109: Samsung Galaxy Note 20 Ultra stock level: 90
+110: iPhone 11 stock level: 90
+111: iPad Pro 4th Gen stock level: 90
+112: Xbox Series X stock level: 90
+113: Playstation 5 stock level: 90
+
+AbbasStockManager.searchProducts("Oppo");
+===Searching for Oppo===
+There are 0 products that contain Oppo in their name
