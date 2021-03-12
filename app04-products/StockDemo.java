@@ -1,10 +1,11 @@
+
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Abbas Raziq
+ * @version 11/03/2021
  */
 public class StockDemo
 {
@@ -18,15 +19,23 @@ public class StockDemo
     public StockDemo(StockManager manager)
     {
         this.manager = manager;
-        
+
         // Add at least 10 products, they do not have to be mobiles
         // Make sure the ids are sequential numbers
-        
-        manager.addProduct(new Product(101, "Samsung Galaxy S20"));
-        manager.addProduct(new Product(102, "Apple iPhone 12"));
+        System.out.println("Attempt to add products with 0 quantity");
+
+        manager.addProduct(new Product(101, "Samsung Galaxy S21 Ultra"));
+        manager.addProduct(new Product(102, "OnePlus 8 Pro"));
         manager.addProduct(new Product(103, "Google Pixel 4A"));
+        manager.addProduct(new Product(104, "iPhone 12 Pro Max"));
+        manager.addProduct(new Product(105, "Oppo Find X2 Pro"));
+        manager.addProduct(new Product(106, "Motorola Edge Plus"));
+        manager.addProduct(new Product(107, "Xiaomi Mi Note 10"));
+        manager.addProduct(new Product(108, "Sony Xperia 1 II"));
+        manager.addProduct(new Product(109, "Samsung Galaxy Note 20 Ultra"));
+        manager.addProduct(new Product(110, "iPhone 11"));
     }
-    
+
     /**
      * Provide a demonstration of how the StockManager meets all
      * the user requirements by making a delivery of each product 
@@ -37,21 +46,51 @@ public class StockDemo
     public void runDemo()
     {
         // Show details of all of the products before delivery.
-        
+
         manager.printAllProducts();
 
         demoDeliverProducts();
         manager.printAllProducts();        
 
         demoSellProducts();
-        manager.printAllProducts();        
-    }
-    
-    private void demoDeliverProducts()
-    {
+        manager.printAllProducts();
     }
 
+    /**
+     * This is where the products will be delivered by the stock manager
+     */
+    private void demoDeliverProducts()
+    {
+        System.out.println("Attempt to deliver products");
+
+        manager.deliverProduct(101, 100);
+        manager.deliverProduct(102, 100);
+        manager.deliverProduct(103, 100);
+        manager.deliverProduct(104, 100);
+        manager.deliverProduct(105, 100);
+        manager.deliverProduct(106, 100);
+        manager.deliverProduct(107, 100);
+        manager.deliverProduct(108, 100);
+        manager.deliverProduct(109, 100);
+        manager.deliverProduct(110, 100);
+    }
+
+    /**
+     * This is where the products will be sold by the stock manager and the quantity sold
+     */
     private void demoSellProducts()
     {
-    }    
+        System.out.println("Attempt to sell products");
+
+        manager.sellProduct(101, 10);
+        manager.sellProduct(102, 10);
+        manager.sellProduct(103, 10);
+        manager.sellProduct(104, 10);
+        manager.sellProduct(105, 10);
+        manager.sellProduct(106, 10);
+        manager.sellProduct(107, 10);
+        manager.sellProduct(108, 10);
+        manager.sellProduct(109, 10);
+        manager.sellProduct(110, 10);
+    }
 }
