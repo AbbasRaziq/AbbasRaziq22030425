@@ -1,0 +1,110 @@
+Program.main();
+Attempt to add products with 0 quantity
+******************************
+ Stock Management Application 
+    App05: by Abbas Raziq
+******************************
+
+    ADD :           Add a new product 
+
+    REMOVE:         Remove an old product
+
+    PRINTPRODUCT:   Print all products
+
+    DELIVER:        Deliver product
+
+    SELL:           Sell product
+
+    LOWSTOCK:       Print product with low stock
+
+    SEARCH:         Search for a product
+
+    RESTOCK:        Restock Product
+
+    PRINT:          Print a product
+
+    QUIT:           Quit the program
+
+
+ Please enter your choice ADD
+
+Enter New Product Name 
+Google Pixel 5
+Enter New Product ID 
+
+150
+Google Pixel 5: 150
+== ADDED ==
+Product@49a207a6
+Product@2c7f8ad2
+Product@69c0419a
+Product@18ddc34
+Product@58cb7494
+Product@8325c45
+Product@63150048
+Product@c160c62
+Product@ffaa6a0
+Product@15b0036e
+Product@5eec46d0
+Product@62a53473
+Product@38b04121
+Product@2d0e9e2a
+
+******************************
+ Stock Management Application 
+    App05: by Abbas Raziq
+******************************
+
+    ADD :           Add a new product 
+
+    REMOVE:         Remove an old product
+
+    PRINTPRODUCT:   Print all products
+
+    DELIVER:        Deliver product
+
+    SELL:           Sell product
+
+    LOWSTOCK:       Print product with low stock
+
+    SEARCH:         Search for a product
+
+    RESTOCK:        Restock Product
+
+    PRINT:          Print a product
+
+    QUIT:           Quit the program
+
+
+ Please enter your choice Your entry is blank!
+ Please enter your choice PRINT
+
+******************************
+ Stock Management Application 
+    App05: by Abbas Raziq
+******************************
+
+    ADD :           Add a new product 
+
+    REMOVE:         Remove an old product
+
+    PRINTPRODUCT:   Print all products
+
+    DELIVER:        Deliver product
+
+    SELL:           Sell product
+
+    LOWSTOCK:       Print product with low stock
+
+    SEARCH:         Search for a product
+
+    RESTOCK:        Restock Product
+
+    PRINT:          Print a product
+
+    QUIT:           Quit the program
+
+
+ Please enter your choice QUIT
+
+ Thank you for using our program 
