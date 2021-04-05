@@ -5,10 +5,9 @@ import java.util.Scanner;
  * InputReader reads typed text input from the standard text terminal. 
  * The text typed by a user is returned.
  * 
- * @author     Michael Kölling and David J. Barnes
- * @version    0.1 (2016.02.29)
+ * @author Abbas Raziq
+ * @version 01/04/2021
  * 
- * Modified by Derek Peacock 13/12/2020
  */
 public class InputReader
 {
