@@ -4,8 +4,8 @@ import java.lang.InterruptedException;
 /**
  * Write a description of class Program here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Abbas Raziq
+ * @version 01/04/2021
  */
 public class Program
 {
