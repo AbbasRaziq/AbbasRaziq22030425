@@ -6,8 +6,9 @@ import java.util.Scanner;
  * The text typed by a user is returned.
  * 
  * @author Abbas Raziq
- * @version 01/04/2021
+ * @version 02/04/2021
  * 
+ * Modified by Evan Castro
  */
 public class InputReader
 {
@@ -20,7 +21,7 @@ public class InputReader
     {
         reader = new Scanner(System.in);
     }
-
+    
     /**
      * Read a line of text from standard input (the text terminal),
      * and return it as a String.
@@ -40,12 +41,11 @@ public class InputReader
             if(!inputLine.isEmpty())
                 isValid = true;
             else 
-                System.out.println("Your entry is blank!");
+                System.out.println("\n Your entry is blank! ");
         }
-
         return inputLine;
     }
-    
+
     /**
      * Read a the next int from standard imput (the text terminal),
      * and return it as an interger.
@@ -67,9 +67,10 @@ public class InputReader
                 isValid = true;
             }
             else 
+            {
                 System.out.println("Your value is less than zero!");
+            }
         }
-
         return number;
     }
 }
