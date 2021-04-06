@@ -126,6 +126,7 @@ public class StockApp
             manager.sellProduct(id, amount);
             System.out.println(product.getName() + ": " + product.getID());
             System.out.println("== SOLD ==");
+            manager.printAllProducts();
         }
         
         //This allows the user to search fro a product using a keyword to find products relating to it
