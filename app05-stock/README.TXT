@@ -7,7 +7,7 @@ PROJECT TITLE: App05 StockApp
 PURPOSE OF PROJECT:To add a simple user interface
 VERSION or DATE: November 2020
 HOW TO START THIS PROJECT: Execute the Program.main() method
-AUTHORS: Student Name
+AUTHORS: Evan Castro
 USER INSTRUCTIONS: Execute the main(0 method
 
 You will need to add the StockManager and the Product classes from a completed version
