@@ -3,7 +3,7 @@
  * Model some details of a product sold by a company.
  * 
  * @author Abbas Raziq
- * @version 01/04/2021
+ * @version 02/04/2021
  */
 public class Product
 {
@@ -43,6 +43,7 @@ public class Product
         return name;
     }
 
+    
     /**
      * This will set the name and allow for the products to be renamed
      */
@@ -50,7 +51,7 @@ public class Product
     {
         name = newName;
     }
-
+    
     /**
      * @return The quantity in stock.
      */
@@ -58,7 +59,7 @@ public class Product
     {
         return quantity;
     }
-
+    
     /**
      * @return The id, name and quantity in stock.
      */
@@ -68,10 +69,18 @@ public class Product
     }
 
     /**
+     * @return The id, name and quantity in stock.
+     */
+    public String toString()
+    {
+        return id + ": " +  name + " stock level: " + quantity;
+    }
+
+    /**
      * Restock with the given amount of this product.
      * The current quantity is incremented by the given amount.
      * @param amount The number of new items added to the stock.
-     *               This must be greater than zero.
+     * This must be greater than zero.
      */
     public void increaseQuantity(int amount)
     {
@@ -81,28 +90,29 @@ public class Product
         }
         else 
         {
-            System.out.println(" Restock " + name + " quantity: " + amount);
+            System.out.println("Attempted to restock " + name + " without a positive amount: " + amount);
         }
     }
 
     /**
      * Sell one of these products.
-     * An error is reported if there appears to be no stock.
+     * An error is reported if there is limited or zero stocks
      */
     public void sellQuantity(int amount)
     {
-        if(amount <= quantity) 
+       if(amount == 0)
+        {
+            System.out.println("Error: Must enter a positive value");
+        }
+        else if(amount <= quantity) 
         {
             quantity -= amount;
         }
         else if(amount > quantity) 
         {
-            System.out.println("This product does not have enough stock to sell");
-        }
-        else if(amount == 0)
-        {
-            System.out.println("Error: Must enter a positive value");
-            System.out.println("Attempt to sell " + amount + " " + name + " when there is only " + quantity + " in stock");
+            System.out.println("Error: Limited stock available!, Please add more stock");
+            System.out.println("Attempt to sell " + amount + " " + name + 
+                " limited " + quantity + " in stock");
         }
     }
 }
