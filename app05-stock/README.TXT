@@ -5,9 +5,9 @@ StockManager which can manage a list of products
 
 PROJECT TITLE: App05 StockApp
 PURPOSE OF PROJECT:To add a simple user interface
-VERSION or DATE: November 2020
+VERSION or DATE: April 2021
 HOW TO START THIS PROJECT: Execute the Program.main() method
-AUTHORS: Evan Castro
+AUTHORS: Abbas Raziq
 USER INSTRUCTIONS: Execute the main(0 method
 
 You will need to add the StockManager and the Product classes from a completed version
