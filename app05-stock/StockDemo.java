@@ -1,16 +1,20 @@
+import java.util.Random;
+
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
- * 
+ *
  * @author Abbas Raziq
- * @version 11/03/2021
+ * @version 02/04/2021
  */
 public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
-
+    private Random randomGenerator;
+    private Product product;
+    
     /**
      * Create a StockManager and populate it with at least
      * 10 sample products.
@@ -18,11 +22,8 @@ public class StockDemo
     public StockDemo(StockManager manager)
     {
         this.manager = manager;
-
         // Add at least 10 products, they do not have to be mobiles
-        // Make sure the ids are sequential numbers
-        System.out.println("Attempt to add products with 0 quantity");
-
+        // Make sure the ids are sequential numbers;
         manager.addProduct(new Product(101, "Samsung Galaxy S21 Ultra"));
         manager.addProduct(new Product(102, "OnePlus 8 Pro"));
         manager.addProduct(new Product(103, "Google Pixel 4A"));
@@ -50,52 +51,32 @@ public class StockDemo
         // Show details of all of the products before delivery.
         manager.printAllProducts();
         demoDeliverProducts();
-        manager.printAllProducts();
+        manager.printAllProducts();        
         demoSellProducts();
         manager.printAllProducts();
     }
-
+    
     /**
-     * This is where the products will be delivered by the stock manager
+     * This is where the products will be delivered by the stock manager and will randomly generate deliver 
+     * quantity
      */
     private void demoDeliverProducts()
     {
-        System.out.println("Attempt to deliver products");
-
-        manager.deliverProduct(101, 10);
-        manager.deliverProduct(102, 10);
-        manager.deliverProduct(103, 10);
-        manager.deliverProduct(104, 10);
-        manager.deliverProduct(105, 10);
-        manager.deliverProduct(106, 10);
-        manager.deliverProduct(107, 10);
-        manager.deliverProduct(108, 10);
-        manager.deliverProduct(109, 10);
-        manager.deliverProduct(110, 10);
-        manager.deliverProduct(111, 10);
-        manager.deliverProduct(112, 10);
-        manager.deliverProduct(113, 10);
+        System.out.println("Deliver");
+        {
+            manager.deliverProduct(103,20);
+        }
     }
-
+    
     /**
-     * This is where the products will be sold by the stock manager and the quantity sold
+     * This is where the products will be sold by the stock manager and the quantity sold and will randomly
+     * generate sell quantity
      */
     private void demoSellProducts()
     {
-        System.out.println("Attempt to sell products");
-
-        manager.sellProduct(101, 10);
-        manager.sellProduct(102, 10);
-        manager.sellProduct(103, 10);
-        manager.sellProduct(104, 10);
-        manager.sellProduct(105, 10);
-        manager.sellProduct(106, 10);
-        manager.sellProduct(107, 10);
-        manager.sellProduct(108, 10);
-        manager.sellProduct(109, 10);
-        manager.sellProduct(110, 10);
-        manager.sellProduct(111, 10);
-        manager.sellProduct(112, 10);
-        manager.sellProduct(113, 10);
+        System.out.println("Sell");
+        {
+            manager.sellProduct(103, 10);
+        }
     }
 }
